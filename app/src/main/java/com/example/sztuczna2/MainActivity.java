@@ -8,8 +8,11 @@ import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -20,6 +23,35 @@ public class MainActivity extends AppCompatActivity {
     //views from activity
     TextView mTextTv;
     ImageButton mVoiceBtn;
+    ImageView x_0_y_0;
+    ImageView x_1_y_0;
+    ImageView x_2_y_0;
+    ImageView x_3_y_0;
+    ImageView x_4_y_0;
+    ImageView x_5_y_0;
+    ImageView x_6_y_0;
+    ImageView x_7_y_0;
+    ImageView x_8_y_0;
+    ImageView x_0_y_1;
+    ImageView x_1_y_1;
+    ImageView x_2_y_1;
+    ImageView x_3_y_1;
+    ImageView x_4_y_1;
+    ImageView x_5_y_1;
+    ImageView x_6_y_1;
+    ImageView x_7_y_1;
+    ImageView x_8_y_1;
+    ImageView x_0_y_2;
+    ImageView x_1_y_2;
+    ImageView x_2_y_2;
+    ImageView x_3_y_2;
+    ImageView x_4_y_2;
+    ImageView x_5_y_2;
+    ImageView x_6_y_2;
+    ImageView x_7_y_2;
+    ImageView x_8_y_2;
+    ImageView x_0_y_3;
+
 
 
     @Override
@@ -29,6 +61,10 @@ public class MainActivity extends AppCompatActivity {
 
         mTextTv = findViewById(R.id.textTV);
         mVoiceBtn = findViewById(R.id.voiceBtn);
+        //zapamietanie id obrazkow
+        x_0_y_0 = findViewById(R.id.x_0_y_0);
+        x_1_y_0 = findViewById(R.id.x_1_y_0);
+        //...
 
         //button click listener
         mVoiceBtn.setOnClickListener(new View.OnClickListener() {
@@ -66,12 +102,43 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        int x = 0, y = 0;
         super.onActivityResult(requestCode, resultCode, data);
         switch(requestCode){
             case REQUEST_CODE_SPEECH_INPUT:{
                 if (resultCode==RESULT_OK && data!=null) {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     mTextTv.setText(result.get(0));
+                    for(String i: result){
+                        //przykladowe frazy
+                        if(i.equals("pustak")){
+                            //pozycja do ustawienia
+                            if(i.equals("x")){
+                                if(i.equals("jeden")){
+                                    x = 1;
+                                }
+                                //...
+                            }
+                            if(i.equals("y")){
+                                if(i.equals("jeden")){
+                                    y = 1;
+                                }
+                                //...
+                            }
+                            //argument w load() to String z adresem URL obrazka
+                            //argument into() obrazek z layoutu zadeklarowany wyzej zalezny od x y
+                            Picasso.get().load("https://obrazek.pl").into(x_0_y_0);
+                        }
+                        if(i.equals("dach")){
+
+                        }
+                        if(i.equals("okno")){
+
+                        }
+                        if(i.equals("drzwi")){
+
+                        }
+                    }
                 }
                 break;
             }
