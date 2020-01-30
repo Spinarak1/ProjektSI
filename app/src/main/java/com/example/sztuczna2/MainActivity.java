@@ -64,7 +64,35 @@ public class MainActivity extends AppCompatActivity {
         //zapamietanie id obrazkow
         x_0_y_0 = findViewById(R.id.x_0_y_0);
         x_1_y_0 = findViewById(R.id.x_1_y_0);
+        x_2_y_0 = findViewById(R.id.x_2_y_0);
+        x_3_y_0 = findViewById(R.id.x_3_y_0);
+        x_4_y_0 = findViewById(R.id.x_4_y_0);
+        x_5_y_0 = findViewById(R.id.x_5_y_0);
+        x_6_y_0 = findViewById(R.id.x_6_y_0);
+        x_7_y_0 = findViewById(R.id.x_7_y_0);
+        x_8_y_0 = findViewById(R.id.x_8_y_0);
         //...
+        x_0_y_1 = findViewById(R.id.x_0_y_1);
+        x_1_y_1 = findViewById(R.id.x_1_y_1);
+        x_2_y_1 = findViewById(R.id.x_2_y_1);
+        x_3_y_1 = findViewById(R.id.x_3_y_1);
+        x_4_y_1 = findViewById(R.id.x_4_y_1);
+        x_5_y_1 = findViewById(R.id.x_5_y_1);
+        x_6_y_1 = findViewById(R.id.x_6_y_1);
+        x_7_y_1 = findViewById(R.id.x_7_y_1);
+        x_8_y_1 = findViewById(R.id.x_8_y_1);
+        //...
+        x_0_y_2 = findViewById(R.id.x_0_y_2);
+        x_1_y_2 = findViewById(R.id.x_1_y_2);
+        x_2_y_2 = findViewById(R.id.x_2_y_2);
+        x_3_y_2 = findViewById(R.id.x_3_y_2);
+        x_4_y_2 = findViewById(R.id.x_4_y_2);
+        x_5_y_2 = findViewById(R.id.x_5_y_2);
+        x_6_y_2 = findViewById(R.id.x_6_y_2);
+        x_7_y_2 = findViewById(R.id.x_7_y_2);
+        x_8_y_2 = findViewById(R.id.x_8_y_2);
+        //...
+        x_0_y_3 = findViewById(R.id._x_0_y_3);
 
         //button click listener
         mVoiceBtn.setOnClickListener(new View.OnClickListener() {
@@ -109,33 +137,202 @@ public class MainActivity extends AppCompatActivity {
                 if (resultCode==RESULT_OK && data!=null) {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     mTextTv.setText(result.get(0));
-                    for(String i: result){
+                    for(int i = 0; i<result.size(); i++){
                         //przykladowe frazy
-                        if(i.equals("pustak")){
-                            //pozycja do ustawienia
-                            if(i.equals("x")){
-                                if(i.equals("jeden")){
-                                    x = 1;
-                                }
-                                //...
+                        if(result.get(i).equals("pustak")){
+                            if(i+ 1<result.size()){
+                                i++;
                             }
-                            if(i.equals("y")){
-                                if(i.equals("jeden")){
-                                    y = 1;
+                            if(result.get(i).equals("na")) {
+                                if(i+ 1<result.size()){
+                                    i++;
                                 }
-                                //...
+                                //pozycja do ustawienia
+                                    if (result.get(i).equals("zero")) {
+                                        if(i+ 1<result.size()){
+                                            i++;
+                                        }
+                                        if (result.get(i).equals("zero")) {
+                                            //argument w load() to String z adresem URL obrazka
+                                            //argument into() obrazek z layoutu zadeklarowany wyzej zalezny od x y
+                                            Picasso.get().load("https://obrazek.pl").into(x_0_y_0);
+                                        }
+                                        if (result.get(i).equals("jeden")) {
+                                            Picasso.get().load("https://obrazek.pl").into(x_0_y_1);
+                                        }
+                                        if (result.get(i).equals("dwa")) {
+                                            Picasso.get().load("https://obrazek.pl").into(x_0_y_2);
+                                        }
+                                        if (result.get(i).equals("trzy")) {
+                                            Toast.makeText(this, "Nie możesz postawić tego elementu", Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                if (result.get(i).equals("jeden")) {
+                                    if(i+ 1<result.size()){
+                                        i++;
+                                    }
+                                    if (result.get(i).equals("zero")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_1_y_0);
+                                    }
+                                    if (result.get(i).equals("jeden")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_1_y_1);
+                                    }
+                                    if (result.get(i).equals("dwa")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_1_y_2);
+                                    }
+                                    if (result.get(i).equals("trzy")) {
+                                        Toast.makeText(this, "Nie możesz postawić tego elementu", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                                if (result.get(i).equals("dwa")) {
+                                    if(i+ 1<result.size()){
+                                        i++;
+                                    }
+                                    if (result.get(i).equals("zero")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_2_y_0);
+                                    }
+                                    if (result.get(i).equals("jeden")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_2_y_1);
+                                    }
+                                    if (result.get(i).equals("dwa")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_2_y_2);
+                                    }
+                                    if (result.get(i).equals("trzy")) {
+                                        Toast.makeText(this, "Nie możesz postawić tego elementu", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                                if (result.get(i).equals("trzy")) {
+                                    if(i+ 1<result.size()){
+                                        i++;
+                                    }
+                                    if (result.get(i).equals("zero")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_3_y_0);
+                                    }
+                                    if (result.get(i).equals("jeden")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_3_y_1);
+                                    }
+                                    if (result.get(i).equals("dwa")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_3_y_2);
+                                    }
+                                    if (result.get(i).equals("trzy")) {
+                                        Toast.makeText(this, "Nie możesz postawić tego elementu", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                                if (result.get(i).equals("cztery")) {
+                                    if(i+ 1<result.size()){
+                                        i++;
+                                    }
+                                    if (result.get(i).equals("zero")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_4_y_0);
+                                    }
+                                    if (result.get(i).equals("jeden")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_4_y_1);
+                                    }
+                                    if (result.get(i).equals("dwa")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_4_y_2);
+                                    }
+                                    if (result.get(i).equals("trzy")) {
+                                        Toast.makeText(this, "Nie możesz postawić tego elementu", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                                if (result.get(i).equals("pięć")) {
+                                    if(i+ 1<result.size()){
+                                        i++;
+                                    }
+                                    if (result.get(i).equals("zero")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_5_y_0);
+                                    }
+                                    if (result.get(i).equals("jeden")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_5_y_1);
+                                    }
+                                    if (result.get(i).equals("dwa")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_5_y_2);
+                                    }
+                                    if (result.get(i).equals("trzy")) {
+                                        Toast.makeText(this, "Nie możesz postawić tego elementu", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                                if (result.get(i).equals("sześć")) {
+                                    if(i+ 1<result.size()){
+                                        i++;
+                                    }
+                                    if (result.get(i).equals("zero")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_6_y_0);
+                                    }
+                                    if (result.get(i).equals("jeden")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_6_y_1);
+                                    }
+                                    if (result.get(i).equals("dwa")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_6_y_2);
+                                    }
+                                    if (result.get(i).equals("trzy")) {
+                                        Toast.makeText(this, "Nie możesz postawić tego elementu", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                                if (result.get(i).equals("siedem")) {
+                                    if(i+ 1<result.size()){
+                                        i++;
+                                    }
+                                    if (result.get(i).equals("zero")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_7_y_0);
+                                    }
+                                    if (result.get(i).equals("jeden")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_7_y_1);
+                                    }
+                                    if (result.get(i).equals("dwa")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_7_y_2);
+                                    }
+                                    if (result.get(i).equals("trzy")) {
+                                        Toast.makeText(this, "Nie możesz postawić tego elementu", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                                if (result.get(i).equals("osiem")) {
+                                    if(i+ 1<result.size()){
+                                        i++;
+                                    }
+                                    if (result.get(i).equals("zero")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_8_y_0);
+                                    }
+                                    if (result.get(i).equals("jeden")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_8_y_1);
+                                    }
+                                    if (result.get(i).equals("dwa")) {
+                                        Picasso.get().load("https://obrazek.pl").into(x_8_y_2);
+                                    }
+                                    if (result.get(i).equals("trzy")) {
+                                        Toast.makeText(this, "Nie możesz postawić tego elementu", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                                    //...
+                                    //...
                             }
-                            //argument w load() to String z adresem URL obrazka
-                            //argument into() obrazek z layoutu zadeklarowany wyzej zalezny od x y
-                            Picasso.get().load("https://obrazek.pl").into(x_0_y_0);
                         }
-                        if(i.equals("dach")){
+                        if(result.get(i).equals("dach")){
+                            if(i+1<result.size()){
+                                i++;
+                            }
+                            if(result.get(i).equals("na")){
+                                if(i+1<result.size()){
+                                    i++;
+                                }
+                                if(result.get(i).equals("zero")){
+                                    if(i+1<result.size()){
+                                        i++;
+                                    }
+                                    if(result.get(i).equals("trzy")){
+                                        Picasso.get().load("https://obrazek.pl").into(x_0_y_3);
+                                    }else{
+                                        Toast.makeText(this, "Nie możesz postawić tego elementu w tej lokacji", Toast.LENGTH_SHORT).show();
+                                    }
+                                }else{
+                                    Toast.makeText(this, "Nie możesz postawić tego elementu w tej lokacji", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        }
+                        if(result.get(i).equals("okno")){
 
                         }
-                        if(i.equals("okno")){
-
-                        }
-                        if(i.equals("drzwi")){
+                        if(result.get(i).equals("drzwi")){
 
                         }
                     }
