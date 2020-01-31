@@ -29,6 +29,226 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TableLayout
+        android:id="@+id/tableLayoutMagazine"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/magazine_bricks_22"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/magazine_bricks_19"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_bricks_20"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_bricks_21"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/magazine_bricks_16"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_bricks_17"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_bricks_18"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/magazine_bricks_13"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_bricks_14"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_bricks_15"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/magazine_bricks_10"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_bricks_11"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_bricks_12"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/magazine_bricks_7"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_bricks_8"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_bricks_9"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/magazine_bricks_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_bricks_5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_bricks_6"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_windows_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_windows_4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/magazine_bricks_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_bricks_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_bricks_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_windows_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_windows_2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_doors_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/magazine_roof_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -227,28 +447,12 @@
 
     </TableLayout>
 
-    <TableLayout
-        android:layout_width="355dp"
-        android:layout_height="393dp"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="396dp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
